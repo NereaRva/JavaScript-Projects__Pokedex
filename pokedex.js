@@ -1,3 +1,4 @@
+//informacion de la api
 document.addEventListener('DOMContentLoaded', function () {
     const orderList = document.querySelector("ol");
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     mostrar();
-    
+//muestra los pokemon en la web    
     function paint(pokemon) {
         const item = document.createElement('li');
         orderList.appendChild(item);
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             addFavoritos(pokemon);
         });
     }
-    
+//crear boton por cada tipo de pokemon y otro de mostrar todos   
     function tipos(types) {
        const contenedorButton = document.getElementById("divButton");
     
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     
     const favoritosList = document.querySelector('#favoritosList');
-favoritosList.addEventListener('click', (event) => {
+    favoritosList.addEventListener('click', (event) => {
     if (event.target.classList.contains('borrar')) {
         const listItem = event.target.closest('li');
         if (listItem) {
@@ -120,7 +121,7 @@ const dNone = document.querySelector("#close");
 dNone.addEventListener("click", () => {
     document.querySelector(".pop-up").classList.add("dnone");
 });
-
+//agregar pokemon a la ventana emergente de favoritos
 function addFavoritos(pokemon) {
     const favoritosList = document.querySelector('#favoritosList');
     
