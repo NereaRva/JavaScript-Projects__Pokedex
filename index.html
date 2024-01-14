@@ -5,17 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="pokedex.js" defer></script>
     <title>Pokedex</title>
     <link rel="stylesheet" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ee0dcd7449.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+    <header>
+        <div class="title">
+            <img src="img/gifPokemon.gif" alt="">
+            <h1>Pokedex</h1>
+        </div>
+        <i id="open" class="fa-sharp fa-solid fa-heart"></i>
+    </header>
+    <div id="divButton"></div>
     <div class="container">
-        <h1>Pokedex</h1>
+        
         <ol id="pokedex"></ol>
+    <div class="pop-up dnone">
+        <div class="pop-up__header">
+        <h2>Favoritos</h2>
+        <i id="close" class="fa-solid fa-xmark"></i>
+        </div>
+        <ol id="favoritosList"></ol>
     </div>
+    </div>  
+    <script src="./pokedex.js"></script>
 </body>
 
 </html>
